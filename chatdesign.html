@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <style>
+ body{
+
+ 	background-color: #F8F8F8;
+ }
+ #frame{
+ width:90%;
+ height:570px;
+ border:2px solid #E6E6E6;
+ background-color:white;
+ position:absolute;
+ top:40px;
+ left:65px;
+ }
+#user_data{
+	width:25%;
+	height:100px;
+	border-right:1px solid #E6E6E6;
+	border-bottom:1px solid #E6E6E6; 
+
+}
+.csimage{
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2), 0 3px 3px 0 rgba(0, 0, 0, 0.19);
+  border-radius:50%;
+  height:50px;
+  width:11%;
+  margin-top:17px;
+  margin-left:28px;
+  float:left;
+  position:relative;
+  border:1px solid #0084FF;
+  padding: 3px;
+  }
+ .cu_name{ 
+    position: absolute;
+    top: 30px;
+    left: 90px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: #3eea3e;
+ }
+
+    
+
+#user_list{
+	width:25%;
+	height:470px;
+	border-right:1px solid #E6E6E6;
+}
+#chat_label{
+	position: absolute;
+	top:0;
+	left:308px;
+	width:50.1%;
+	height:60px;
+	border-right: 1px solid #E6E6E6;
+	border-bottom: 1px solid #E6E6E6;
+	background-color: #00B0FF;
+
+}
+#message_stage{
+	position: absolute;
+    top:60px;
+    left:310px;
+   	width:50%;
+	height:440px;
+	border-bottom: 1px solid #E6E6E6;
+}
+#pen{
+	position: absolute;
+    top:500px;
+    left:310px;
+   	width:50%;
+   	height:70px;
+}
+#message_wrap{
+    position: absolute;
+    top:0;
+    left:310px;
+   	width:50%;
+	height:570px;
+	border-right:1px solid #E6E6E6;
+}
+
+</style>
+</head>
+<body>
+	<?php
+	session_start();
+	if(!isset($_SESSION['user'])){
+		header("location:index.php");
+	}
+	require("db/users.php");
+	require("db/chatrooms.php");
+
+	$objChatrooms = new chatrooms;
+	$chatrooms = $objChatrooms->getAllChatRooms();
+
+	$objUser = new users;
+	$users = $objUser->getAllUsers();
+    ?>
+    <table>
+    	<tr>
+    		<td>
+    		<?php
+    		foreach($_SESSION['user'] as $key => $user){
+    			$userId = $key;
+    			echo'<input type="hidden" name="userId" id="userId"
+    		        value="'.$key.'">';
+    			echo"<div>".$user['name']."</div>";
+
+    		}
+    		?>	
+	<div id='frame'>
+		<div id="user_data"><img src="us.png" class="csimage";><div class="cu_name">venkatesh</div></div>
+		<div id="user_list"></div>
+		<div id="chat_label"></div>
+		<div id="message_wrap"></div>
+		<div id="message_stage"></div>
+		<div id="pen"></div> 
+
+	</div>
+</body>
+</html>

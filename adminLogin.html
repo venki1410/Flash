@@ -1,0 +1,72 @@
+  <!DOCTYPE html>
+<html>
+<head>
+	<title>ADMIN</title>
+	<style>
+	a{
+		text-decoration: none;
+	}
+		body{
+			display: grid;
+			grid-template-columns: 100%;
+			grid-template-rows:100%;
+			grid-template-areas:"main";
+			text-align: center;
+			justify-items:center;
+			background-color: dodgerblue;
+		}
+		.card{
+			grid-area: main;
+			padding: 20px 30px;
+			background-color: white;
+			border-radius: 20px;
+			margin-top:170px;
+			justify-items:center;
+
+
+		}
+		input[type=text],input[type=password]{
+			height: 35px;
+			width:200px;
+			border:2px solid dodgerblue;
+			border-radius: 20px;
+			padding: 2px;
+			outline: none;
+			text-align: center;
+		}
+		input[type=text]:hover,input[type=password]:hover{
+			border:2px solid #525252;
+		}
+		.lbtn{
+			width:70px;
+			padding: 9px;
+			border:2px solid dodgerblue;
+			border-radius: 7px;
+			font-weight: bold;
+			background-color:dodgerblue;
+			color: white;
+			transition: .3s;
+		}
+		.lbtn:hover{
+			background-color:white;
+			color: black;
+		}
+		table{
+			color:#525252;
+		}
+	</style>
+
+</head>
+<body>
+<div class="card">
+	<form action="admin_val.php" method="post">
+	<table cellpadding="5px">
+		<tr><th align="left" style="font-size: 20px;font-weight: bold;color:dodgerblue;"> ADMIN</th></tr>
+		<tr><td><input type="text" name="aduser" placeholder="USER NAME" required></td></tr>
+		<tr><td><input type="password" name="adpwd" placeholder="PASSWORD" required></td></tr>
+		<tr><td align="right"><input type="submit" name="submit" class="lbtn"/></td></tr>
+	</table>
+</form>
+</div>
+</body>
+</html>

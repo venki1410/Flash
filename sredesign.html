@@ -1,0 +1,294 @@
+<html>
+<head>
+  <link rel="icon" type="image/ico" href="flashlogo.png" />
+<link href="https://fonts.googleapis.com/css?family=Baloo+Paaji|Courgette|Fredoka+One" rel="stylesheet">
+  <style>
+
+body {
+  height: 100%;
+  overflow: hidden;
+  width: 100% !important;
+  box-sizing: border-box;
+  font-family: 'Fredoka One', cursive;
+}
+
+
+
+.backRight {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background:white url(logo2.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.backLeft {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #0084FF url(loogo.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+#back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -999;
+}
+
+#slideBox {
+  width: 50%;
+  max-height: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-left: 50%;
+  position: absolute;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.topLayer {
+  width: 200%;
+  height: 100%;
+  position: relative;
+  left: 0;
+  left: -100%;
+}
+
+.left {
+  width: 50%;
+  height: 100%;
+  background: #2C3034;
+  left: 0;
+  position: absolute;
+}
+
+.right {
+  width: 50%;
+  height: 100%;
+  background: #f9f9f9;
+  right: 0;
+  position: absolute;
+}
+
+.content {
+  font-family: 'Fredoka One', cursive;
+  width: 250px;
+  margin: 0 auto;
+  top: 20%;
+  position: absolute;
+  left: 50%;
+  margin-left: -125px;
+}
+
+.content h2 {
+  color: #212121;
+  font-weight:700;
+  font-family: 'Fredoka One', cursive;
+  font-size: 35px;
+  font-weight:lighter;
+
+}
+
+button {
+  font-family: 'Fredoka One', cursive;
+  background: #03A9F4;
+  padding: 10px 16px;
+  width: auto;
+  font-weight: 600;
+  text-transform:  uppercase;
+  font-size: 14px;
+  color: #fff;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+  border: 0;
+  outline: 0;
+  margin: 15px 15px 15px 0;
+  transition: all 0.25s;
+}
+
+button:hover {
+  background: #0288D1;
+  box-shadow: 0 4px 7px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+}
+.off {
+  background: none;
+  color:#03A9F4;
+  box-shadow: none;
+  font-size:16px;
+}
+
+.right .off:hover {
+  background: #eee;
+  color: #03A9F4;
+  box-shadow: none;
+}
+.left .off:hover {
+  box-shadow: none;
+  color: #03A9F4;
+  background: #363A3D;
+}
+input[type=text],input[type=password] {
+  background: transparent;
+  width:250px;
+  height:40px;
+  border: 0;
+  outline: 0;
+  border: 2px solid #757575;
+  font-size: 18px;
+  color:green;
+  padding: 8px 0;
+  margin-top: 20px;
+  text-align: center;
+border-radius:25px;
+transition: 0.70s;
+}
+input[type=text]:hover,input[type=password]:hover{
+
+}
+input[type=submit] {
+  background:#2962FF;
+  width:90px;
+  height:46px;
+  border: 0;
+  outline: 0;
+  /*border: 2px solid #757575;*/
+  font-size: 18px;
+  color: white;
+  padding: 8px 0;
+  margin-top: 20px;
+  text-align: center;
+  border-radius:25px;
+  font-family: 'Fredoka One', cursive;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, .2);
+
+}
+input[type = "submit"]:focus{
+  background: #2ecc71;
+  border: none;
+  box-shadow: 1px 1px 8px rgba(0, 255, 0, 0.4);
+  width:88px;
+  height:43px;
+}
+input[type = "submit"]:hover{
+  background-color: #2ecc71;
+}
+input[type = "text"]:focus,input[type = "password"]:focus{
+  border-color:#0084FF;
+
+}
+::placeholder {
+  color: #757575;
+ font-family: 'Fredoka One', cursive;
+}
+@media only screen and (max-width: 768px){
+.backLeft{
+  display:hidden;
+}
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+  
+$(document).ready(function(){
+  $('#goRight').on('click', function(){
+    $('#slideBox').animate({
+      'marginLeft' : '0'
+    });
+    $('.topLayer').animate({
+      'marginLeft' : '100%'
+    });
+  });
+  $('#goLeft').on('click', function(){
+    $('#slideBox').animate({
+      'marginLeft' : '50%'
+    });
+    $('.topLayer').animate({
+      'marginLeft': '0'
+    });
+  });
+});
+
+
+</script>
+</head>
+<body>
+<div id="back">
+  <div class="backRight"></div>
+  <div class="backLeft"></div>
+</div>
+
+<div id="slideBox">
+  <div class="topLayer">
+    <div class="left">
+      <div class="content">
+        <h2 style="color:white">Student</h2>
+
+
+        <form action="login2_val.php" method="post">
+          <div class="form-group">
+            <input type="text" name="si" placeholder="username" required />
+            <input type="password" name="pwd" placeholder="password" required />
+          </div>
+          <div class="form-group"></div>
+          <div class="form-group"></div>
+          <div class="form-group"></div>
+         <button id="goLeft" class="off">Staff</button> <input  type="submit" name="submit"  value="LOGIN">
+        </form>
+        <!--TOGGEL LEFT BUTTON-->
+      </div>
+    </div>
+    <div class="right">
+      <div class="content">
+        
+        <form  action="login_val.php" method="post" autocomplete="off">
+<table>
+  <tr><td><h2>STAFF</h2></td></tr>
+<tr><td><input type="text" name="si" placeholder="ID" required ></td></tr>
+<tr><td><input type="password" name="pwd" placeholder="password" required ></td></tr>
+<tr><td><button id="goRight" class="off">student</button></td></tr>
+<tr align="right"><td><input  type="submit" name="submit" value="LOGIN"></td></tr>
+<!--<tr><td><a href="staff_registration.php" style="text-decoration:none;color:#282828;">REGISTER</a></td></tr>-->
+</table>
+</form>
+
+       <!-- <form method="post" onsubmit="return false;">
+          <div class="form-group">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" />
+            <label for="password" class="form-label">Password</label>
+            <input type="text" />
+          </div>
+          <button id="goRight" class="off">student</button><
+          <button id="login" type="submit">login</button>
+        </form>-->
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,224 @@
+ion-icon {
+  font-size: 35px;
+  position: absolute;
+  margin-left:20px;
+  margin-top: 5px;
+  background-color: #373737;
+  border-radius: 10px;
+  font-weight: 30px;
+  padding-left: 3px;
+  padding-right: 3px;
+  color:white;
+
+}
+#header{
+color:#0080FF;
+width:100%;
+height:45px;
+background-color:#FFFFFF;
+font-weight:bold;
+}
+
+#flash{
+color:#616161;
+width:100%;
+height:25px;
+background-color:#dedede;
+padding-top: 5.5px;
+font-size:20px;
+font-weight:bold;
+}
+
+#content{
+color:black;
+width:69.5%;
+height:550px;
+background-color:white;
+float:left;
+margin-top:5px; 
+overflow-y:auto;
+overflow-x: hidden;
+}
+
+#campus_feed{
+	color:white;
+width:30%;
+height:550px;
+float:right;
+background-color:#333;/**/
+margin-top:5px;
+overflow:auto;
+}
+
+
+body {
+  background-color:#EEEEEE;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+
+/* Style the navigation menu */
+
+
+.flash {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+  position:fixed;
+  bottom:0;
+  
+  
+}
+
+
+.button {
+    font-family: 'Fredoka One', cursive;
+    background-color:none; /* Green */
+    border: 2px solid grey;
+    color: white;
+    padding: 4px 15px;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    font-size: 17px;
+    font-weight:lighter;
+    margin: 4px 2px;
+    cursor: pointer;
+    position:relative;
+  top:2px;
+  left:5px;
+}
+
+.button5 {
+  background-color:white;
+  color:grey;
+  border: 2px solid grey;
+	border-radius: 12px;
+  text-decoration: none;
+}
+
+.button5:hover {
+  background-color: #f44336;
+  color: white;
+  border: 2px solid #f44336;
+
+}
+.button1 {
+  background-color:white;
+  color:grey;
+  border: 2px solid grey;
+  border-radius: 12px;
+}
+.button1:hover {
+ background-color: #616161; 
+ color:white; 
+}
+
+.button2 {
+    background-color:white;
+    color:grey;
+    border: 2px solid grey;
+  border-radius: 12px;
+}
+
+.button2:hover {
+    background-color: #616161; 
+    color:white;
+}
+.button3 {
+    background-color:white;
+    color: grey;
+    border: 2px solid grey;
+  border-radius: 12px;
+}
+.button3:hover {
+    background-color: #616161; 
+    color:white;
+}
+.button4 {
+    background-color:white;
+    color: grey;
+    border: 2px solid grey;
+  border-radius: 12px;
+}
+.button4:hover {
+    background-color: #616161; 
+    color:white;
+}
+.button6 {
+    background-color:white;
+    color: grey;
+    border: 2px solid grey;
+  border-radius: 12px;
+}
+.button6:hover {
+    background-color: #616161; 
+    color:white;
+}
+
+.uname{
+  padding: 5px 15px;
+  position:absolute;
+  right:150px;
+  top:14px;
+  color:#00cc00;
+  float:right;
+  font-size: 20px;
+  background-color:#EEEEEE; 
+  border-radius:20px;
+  display: inline-block;
+}
+.uname:hover{
+  background-color:black;
+  color:white;
+}
+.branding
+{
+  position:relative;
+  right:500px;
+  float:right;
+  color:black;
+  top:3px;
+  font-weight: bold;
+  font-size: 35px;
+}
+.branding:hover{
+color:black;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow:#333; 
+    border-radius: 10px;
+    background-color:#333333;
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background:#1a1a1a; 
+    border-radius:10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background:white; 
+}
+.blinking{
+    animation:blinkingText 2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #0084FF;}/*green*/
+    25%{    color: red; }/*indico*/
+    50%{    color: #0084FF; }/*red*/
+    75%{    color: red;  }
+    100%{   color: #0084FF;}/*purple*/
+}
